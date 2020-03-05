@@ -16,6 +16,7 @@ export default async (req, res) => {
       .populate({
         path: "products.product",
         model: Product,
+        model: 'Product',
       });
     res.status(200).json({ orders });
   } catch (error) {
